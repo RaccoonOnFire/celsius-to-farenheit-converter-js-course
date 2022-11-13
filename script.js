@@ -34,6 +34,14 @@ const resetHandler = () => {
   result.textContent = ""
 }
 
-convertBtn.addEventListener("click", convertionHandler)
+const isInputEmpty = () => {
+  if (converter.value != "") {
+    convertionHandler()
+  } else {
+    result.textContent = "Please, enter a number!"
+  }
+}
+
+convertBtn.addEventListener("click", isInputEmpty)
 resetBtn.addEventListener("click", resetHandler)
 changeBtn.addEventListener("click", changeDegreesConvertion)
