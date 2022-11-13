@@ -9,11 +9,11 @@ const second = document.querySelector(".second")
 const convertionHandler = () => {
   if (main.textContent == "Celsius") {
     temp = converter.value * 1.8 + 32
-    result.textContent = temp.toFixed(2) + " \xB0F"
+    result.textContent = `${converter.value} \xB0C is equal to ${temp.toFixed(2)} \xB0F`
   }
   if (main.textContent == "Farenheit") {
     temp = (converter.value - 32) / 1.8
-    result.textContent = temp.toFixed(2) + " \xB0C"
+    result.textContent = `${converter.value} \xB0F is equal to ${temp.toFixed(2)} \xB0C`
   }
 }
 
